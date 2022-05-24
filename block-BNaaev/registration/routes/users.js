@@ -5,17 +5,17 @@ var User = require('../model/Users');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('users');
+  res.send('respond with a resource');
 });
 
 router.get('/register', (req, res, next) => {
   res.render('register');
 });
 
-router.get('/register', (req, res, next) => {
+router.post('/register', (req, res, next) => {
   User.create(req.body, (err, user) => {
     if(err) return next(err);
-    res.redirect('/users/login');
+    res.redirect('/');
   })
 })
 
