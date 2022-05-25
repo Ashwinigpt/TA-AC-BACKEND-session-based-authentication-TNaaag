@@ -19,14 +19,12 @@
     <div class="form">
         <form action="/users/register" method="POST">
             <h2>Register here</h2>
-            <input type="text" name="name" placeholder="Name">
             <% if(error) { %>
                 <p class="err"><%= error %></p>
             <% } %>
+            <input type="text" name="name" placeholder="Name">
             <input type="email" name="email" placeholder="Email">
             <input type="password" name="password" placeholder="Password">
-            <input type="number" name="Age" placeholder="Age">
-            <input type="number" name="Phone" placeholder="Phone">
             <div class="btn">
                 <button type="submit">Register</button>
             </div>
