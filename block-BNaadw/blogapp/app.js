@@ -18,12 +18,11 @@ var { Session } = require('express-session');
 
 var app = express();
 
-// connect to mongoose
+// Setting up the database
 
-mongoose.connect("mongodb://localhost/bookstore",
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  (err) => console.log(err ? err : "Connected to database")
-);
+mongoose.connect('mongodb://localhost/blogapp', (err) => {
+  console.log(err ? err : 'connected : true');
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
